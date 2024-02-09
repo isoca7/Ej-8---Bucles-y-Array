@@ -121,7 +121,7 @@ const reasignaPacientesAMedicoFamilia = (
 const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
   let sePuedeIrACasa = false;
   sePuedeIrACasa = pacientes.some(
-    (paciente) => paciente.especialidad === "Pediatra"
+    (paciente) => paciente.especialidad !== "Pediatra"
   );
   return sePuedeIrACasa;
 };
